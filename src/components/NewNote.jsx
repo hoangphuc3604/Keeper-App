@@ -17,6 +17,16 @@ function NewNote(props) {
         })
     }
 
+    function submitNote(event) {
+        props.onAdd(note)
+        setNote({
+            title: "",
+            content: ""
+        })
+
+        event.preventDefault()
+    }
+
     return (
         <div>
             <form action="">
@@ -33,7 +43,7 @@ function NewNote(props) {
                     value={note.content}
                     onChange={handleChange}>
                 </textarea>
-                <button>+</button>
+                <button onClick={submitNote}>+</button>
             </form>
         </div>
     )

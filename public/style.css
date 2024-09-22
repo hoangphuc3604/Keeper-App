@@ -65,6 +65,7 @@
     height: 36px;
     cursor: pointer;
     outline: none;
+    background-color: #fff;
   }
   
   form {
